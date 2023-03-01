@@ -30,6 +30,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  google_analytics_id: G-WVH6BV7Z74
 
 sphinx:
   config:
