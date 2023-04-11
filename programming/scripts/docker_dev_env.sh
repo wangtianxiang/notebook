@@ -69,6 +69,7 @@ main(){
                 ;;
             ?)
                 echo "unregistered argument"
+                usage
                 exit
                 ;;
         esac
