@@ -131,7 +131,7 @@ main(){
         user_passwd=$(get_passwd $uname)
 
         setup_cmd="apt update && apt install -y vim git sudo && "
-        if [ -n $root_passwd ]
+        if [ -n "$root_passwd" ]
         then
             setup_cmd="$setup_cmd echo -e \"$root_passwd\\n$root_passwd\" | passwd && "
         fi
@@ -139,7 +139,7 @@ main(){
         setup_cmd="$setup_cmd groupadd -g $gid $gname && \
         useradd -d $HOME -s /bin/bash -g $gid -u $uid $uname && "
 
-        if [ -n $user_passwd ]
+        if [ -n "$user_passwd" ]
         then
             setup_cmd="$setup_cmd echo -e \"$user_passwd\\n$user_passwd\" | passwd $uname && "
         fi
